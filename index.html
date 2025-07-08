@@ -1,66 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>tmustardseedmission</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>themustardseedmission</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f7f3;
-      color: #333;
+    body { font-family: Arial, sans-serif; background-color: #f5f0e6; color: #333; margin: 0; padding: 0; }
+    header { background-color: #d2b48c; padding: 1rem; text-align: center; }
+    nav { display: flex; justify-content: center; background-color: #e0cda9; padding: 0.5rem 0; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold; }
+    section { padding: 2rem; max-width: 800px; margin: auto; }
+    img { display: block; margin: 1rem auto; max-width: 100%; height: auto; }
+    form { display: flex; flex-direction: column; }
+    input, textarea, button {
+      margin-bottom: 1rem; padding: 0.5rem; font-size: 1rem;
     }
-    header {
-      background-color: #ddd3b8;
-      padding: 1rem;
-      text-align: center;
+    button {
+      background-color: #8fbc8f; border: none; color: white; cursor: pointer;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      background-color: #ece8df;
-      padding: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #555;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 400px;
-      margin: 1rem auto;
-      display: block;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    input, textarea {
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    input[type="submit"] {
-      background-color: #ddd3b8;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    footer {
-      background-color: #ddd3b8;
-      padding: 1rem;
-      text-align: center;
+    .donate { text-align: center; margin-top: 2rem; }
+    .donate a {
+      display: inline-block; background-color: #d2691e; color: white;
+      padding: 0.75rem 1.5rem; text-decoration: none; font-weight: bold; border-radius: 5px;
     }
   </style>
 </head>
@@ -73,8 +34,10 @@
   <nav>
     <a href="#about">About</a>
     <a href="#community">Community</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#logo">Logo</a>
     <a href="#scripture">Scripture</a>
+    <a href="#prayer">Prayer</a>
+    <a href="#donate">Donate</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -88,42 +51,37 @@
     <p>Our outreach is focused on serving the homeless and those in need. We provide care packages, meals, prayer, and encouragement — all while planting the seed of God’s Word in their hearts. It’s about meeting both physical and spiritual needs with compassion and purpose.</p>
   </section>
 
-  <section id="gallery" class="gallery">
-    <h2>Gallery & Logo</h2>
-    <img src="mustard-seed-planting.png" alt="Mustard Seed Logo and Planting Illustration">
+  <section id="logo">
+    <h2>Logo</h2>
+    <img src="mustard-seed-planting.png" alt="Mustard Seed Logo and Planting Image" />
   </section>
 
-  <section id="scripture">
-    <h2>Scripture</h2>
-    <blockquote>
-      <p>"Truly I tell you, if you have faith as small as a mustard seed, you can say to this mountain, 'Move from here to there,' and it will move. Nothing will be impossible for you."</p>
-      <footer>– Matthew 17:20</footer>
-    </blockquote>
-    <blockquote>
-      <p>"The kingdom of heaven is like a mustard seed, which a man took and planted in his field."</p>
-      <footer>– Matthew 13:31</footer>
-    </blockquote>
+  <section id="prayer">
+    <h2>Prayer Request</h2>
+    <p>If you or someone you know needs prayer, please share below. We would be honored to pray with you.</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email (optional):</label>
+      <input type="email" id="email" name="email">
+
+      <label for="request">Prayer Request:</label>
+      <textarea id="request" name="request" rows="6" required></textarea>
+
+      <button type="submit">Submit Prayer Request</button>
+    </form>
+  </section>
+
+  <section id="donate" class="donate">
+    <a href="https://www.gofundme.com/f/nvbq2-the-mustard-seed-mission" target="_blank">Donate</a>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>To get involved or learn more, contact:</p>
-    <ul>
-      <li><strong>Mary Helen Caton</strong></li>
-      <li>📞 903-920-9089</li>
-      <li>📧 <a href="mailto:maryhelencaton@gmail.com">maryhelencaton@gmail.com</a></li>
-    </ul>
-
-    <form action="mailto:maryhelencaton@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <input type="submit" value="Send Message">
-    </form>
+    <p>Mary Helen Caton<br />
+    📞 903-920-9089<br />
+    📧 <a href="mailto:maryhelencaton@gmail.com">maryhelencaton@gmail.com</a></p>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Mustard Seed Mission. All rights reserved.</p>
-  </footer>
 </body>
 </html>
